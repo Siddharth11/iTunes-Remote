@@ -17,11 +17,9 @@ io.on('connection', function(socket) {
 
     socket.on('change', function(command) {
 
-        // console.log('changed')
+        var task = scripts[command]
 
-        let doSomething = scripts[command]
-
-        execute(doSomething)
+        execute(task)
 
         if (command === 'next' || command === 'previous') {
             socket.emit('track', execute(scripts.currentTrack))
