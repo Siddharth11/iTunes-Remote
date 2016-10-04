@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,31 @@
   "dependencies": {
     "applescript": "^1.0.0",
     "express": "^4.14.0",
-    "osascript": "^1.2.0",
-    "socket.io": "^1.4.8"
+    "internal-ip": "^1.2.0",
+    "node-osascript": "^1.0.4",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-icons": "^2.2.1",
+    "react-redux": "^4.4.5",
+    "react-svg-morph": "^0.1.10",
+    "redux": "^3.6.0",
+    "run-applescript": "^3.0.0",
+    "socket.io": "^1.4.8",
+    "socket.io-client": "^1.4.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "eslint": "^3.6.1",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-env": "^0.4.4",
+    "grunt-exorcise": "^2.1.1",
+    "grunt-sass": "^1.2.1"
   }
 }
