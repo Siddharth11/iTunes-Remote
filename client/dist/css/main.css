@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.page-wrapper {
+  width: 100%;
+  color: #343838;
+  font-family: sans-serif; }
+
+.app {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  border: 1px solid currentColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.controls {
+  width: 100%;
+  overflow: hidden; }
+
+.controls__top,
+.controls__bottom {
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.controls__top {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.controls__bottom {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  cursor: pointer; }
+  .icon-wrapper svg {
+    width: 100%;
+    height: 100%; }
+
+[class*='-ms-']:before {
+  opacity: .15; }
+
+input[type='range'] {
+  box-sizing: border-box;
+  overflow: visible;
+  position: relative;
+  -webkit-appearance: none;
+  width: 100%;
+  max-width: 200px;
+  height: 4px;
+  background: transparent;
+  /* Firefox & Chrome/ Opera need this, 
+     otherwise font-size is smaller */
+  font-size: 1em;
+  cursor: pointer; }
+  input[type='range']::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    border: none;
+    /* because IE */
+    width: 100%;
+    max-width: 200px;
+    height: 4px;
+    border-radius: 2px;
+    background: #343838; }
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #343838; }
+  input[type='range']::-moz-range-track {
+    z-index: -1;
+    /* fix Firefox WTF */
+    border: none;
+    /* because IE */
+    width: 100%;
+    max-width: 200px;
+    height: 4px;
+    border-radius: 2px;
+    background: #343838; }
+  input[type='range']::-moz-range-thumb {
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #343838;
+    cursor: ew-resize; }
+  input[type='range']::-ms-track {
+    border: none;
+    /* because IE */
+    width: 100%;
+    max-width: 200px;
+    height: 4px;
+    border-radius: 2px;
+    background: #343838;
+    color: transparent; }
+  input[type='range']::-ms-thumb {
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #343838; }
+  input[type='range']::-ms-fill-lower, input[type='range']::-ms-fill-upper {
+    background: transparent; }
+  input[type='range']::-ms-tooltip {
+    display: none; }
+  input[type='range']:focus {
+    outline: none; }
+
+.display__track {
+  text-align: center; }
