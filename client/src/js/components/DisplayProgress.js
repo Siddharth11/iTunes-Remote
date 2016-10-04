@@ -12,44 +12,21 @@ const DisplayProgress = React.createClass({
         }
     },
 
-    // getDefaultProps() {
-    //     return {
-    //         position: 0,
-    //         total: 100
-    //     }
-    // },
-
-    componentWillReceiveProps(nextProps) {
-        
-
-
-    },
-    
-
     render() {
 
-        // console.log(this.props)
+        const percent = (this.props.position) / (this.props.total)
 
-        const per = (this.props.position) / (this.props.total)
-
-        const len = (per) ? `${per * 100}%` : `0` 
-
-        // const(per, len)
+        const len = (percent) ? `${percent * 100}%` : `0`
 
         return (
             <svg xmlns="http://www.w3.org/svg/2000"
-					
-					width="100%"
-					height="4px"
-				>
-            <line
-                x1={0}
-                x2={len}
-                y1="50%"
-                y2="50%"
-                stroke="#000"
-                strokeWidth="2px"
-            />
+                className='display__progress'>
+                <line
+                    x1={0}
+                    x2={len}
+                    y1='50%'
+                    y2='50%'
+                    />
             </svg>
         )
     }

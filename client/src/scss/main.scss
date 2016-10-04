@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 body {
     margin: 0;
     padding: 0;
@@ -9,18 +11,18 @@ body {
 
 .page-wrapper {
     width: 100%;
-    color: #343838;
+    color: #fff;
     font-family: sans-serif;
 }
 
 .app {
     width: 100%;
     max-width: 400px;
-    padding: 15px;
-    border: 1px solid currentColor;
     position: absolute;
     top: 50%;
     left: 50%;
+    background-color: $prim-color;
+    box-shadow: 0 9px 21px -5px $prim-color;
     transform: translate(-50%, -50%);
 }
 

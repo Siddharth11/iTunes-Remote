@@ -392,8 +392,6 @@ var _DisplayProgress2 = _interopRequireDefault(_DisplayProgress);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import { connect } from 'react-redux'
-// import store from '../store'
 var Display = _react2.default.createClass({
     displayName: 'Display',
     render: function render() {
@@ -404,15 +402,7 @@ var Display = _react2.default.createClass({
             _react2.default.createElement(_DisplayProgress2.default, null)
         );
     }
-});
-
-// const mapStateToProps = store => {
-//     return {
-//         socket: store.socket
-//     }
-// }
-
-// essentials
+}); // essentials
 exports.default = Display;
 
 },{"./DisplayProgress":14,"./DisplayTrack":15,"react":217}],14:[function(require,module,exports){
@@ -442,40 +432,21 @@ var DisplayProgress = _react2.default.createClass({
             end: 100
         };
     },
-
-
-    // getDefaultProps() {
-    //     return {
-    //         position: 0,
-    //         total: 100
-    //     }
-    // },
-
-    componentWillReceiveProps: function componentWillReceiveProps(nextProps) {},
     render: function render() {
 
-        // console.log(this.props)
+        var percent = this.props.position / this.props.total;
 
-        var per = this.props.position / this.props.total;
-
-        var len = per ? per * 100 + '%' : '0';
-
-        // const(per, len)
+        var len = percent ? percent * 100 + '%' : '0';
 
         return _react2.default.createElement(
             'svg',
             { xmlns: 'http://www.w3.org/svg/2000',
-
-                width: '100%',
-                height: '4px'
-            },
+                className: 'display__progress' },
             _react2.default.createElement('line', {
                 x1: 0,
                 x2: len,
                 y1: '50%',
-                y2: '50%',
-                stroke: '#000',
-                strokeWidth: '2px'
+                y2: '50%'
             })
         );
     }

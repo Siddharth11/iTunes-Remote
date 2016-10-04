@@ -7,40 +7,34 @@ body {
 
 .page-wrapper {
   width: 100%;
-  color: #343838;
+  color: #fff;
   font-family: sans-serif; }
 
 .app {
   width: 100%;
   max-width: 400px;
-  padding: 15px;
-  border: 1px solid currentColor;
   position: absolute;
   top: 50%;
   left: 50%;
+  background-color: #212121;
+  box-shadow: 0 9px 21px -5px #212121;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
 
 .controls {
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 20px; }
 
 .controls__top,
 .controls__bottom {
-  height: 75px;
+  height: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
-
-.controls__top {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-
-.controls__bottom {
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
@@ -48,10 +42,21 @@ body {
 .icon-wrapper {
   width: 50px;
   height: 50px;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 5px;
+  -webkit-transition: opacity .15s;
+          transition: opacity .15s; }
+  .icon-wrapper:nth-child(2) {
+    margin: 0 40px;
+    border: 2px solid #63636B;
+    border-radius: 50%; }
   .icon-wrapper svg {
     width: 100%;
     height: 100%; }
+  .icon-wrapper path {
+    fill: #fff; }
+  .icon-wrapper:active {
+    opacity: .75; }
 
 [class*='-ms-']:before {
   opacity: .15; }
@@ -63,7 +68,7 @@ input[type='range'] {
   -webkit-appearance: none;
   width: 100%;
   max-width: 200px;
-  height: 4px;
+  height: 2px;
   background: transparent;
   /* Firefox & Chrome/ Opera need this, 
      otherwise font-size is smaller */
@@ -75,19 +80,20 @@ input[type='range'] {
     /* because IE */
     width: 100%;
     max-width: 200px;
-    height: 4px;
+    height: 2px;
     border-radius: 2px;
-    background: #343838; }
+    background: #63636B; }
   input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
-    -webkit-transform: translateY(-35%);
-            transform: translateY(-35%);
+    -webkit-transform: translateY(calc(-50% + 1px));
+            transform: translateY(calc(-50% + 1px));
     border: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background: #fff;
-    border: 2px solid #343838; }
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 35px -4px #fff; }
   input[type='range']::-moz-range-track {
     z-index: -1;
     /* fix Firefox WTF */
@@ -95,25 +101,26 @@ input[type='range'] {
     /* because IE */
     width: 100%;
     max-width: 200px;
-    height: 4px;
+    height: 2px;
     border-radius: 2px;
-    background: #343838; }
+    background: #63636B; }
   input[type='range']::-moz-range-thumb {
     border: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background: #fff;
-    border: 2px solid #343838;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 35px -4px #fff;
     cursor: ew-resize; }
   input[type='range']::-ms-track {
     border: none;
     /* because IE */
     width: 100%;
     max-width: 200px;
-    height: 4px;
+    height: 2px;
     border-radius: 2px;
-    background: #343838;
+    background: #63636B;
     color: transparent; }
   input[type='range']::-ms-thumb {
     border: none;
@@ -121,7 +128,8 @@ input[type='range'] {
     height: 20px;
     border-radius: 50%;
     background: #fff;
-    border: 2px solid #343838; }
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 35px -4px #fff; }
   input[type='range']::-ms-fill-lower, input[type='range']::-ms-fill-upper {
     background: transparent; }
   input[type='range']::-ms-tooltip {
@@ -129,5 +137,19 @@ input[type='range'] {
   input[type='range']:focus {
     outline: none; }
 
+.display {
+  position: relative; }
+
 .display__track {
-  text-align: center; }
+  text-align: center;
+  padding: 25px 0; }
+
+.display__progress {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff; }
+  .display__progress line {
+    stroke: #CB121F;
+    stroke-width: 3px; }
