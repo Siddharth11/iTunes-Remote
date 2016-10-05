@@ -63,7 +63,7 @@ module.exports = function (grunt) {
                 tasks: ['sass', 'autoprefixer']
             },
             scripts: {
-                files: ['client/src/js/*.js', 'client/src/js/**/*.js'],
+                files: ['client/src/js/*.js', 'client/src/js/**/*.js', 'client/src/js/**/**/*.js'],
                 tasks: ['browserify', 'exorcise'],
                 options: {
                     spawn: false
