@@ -26,6 +26,11 @@
     padding: 0 10px;
     height: 40px;
     border-bottom: 1px solid $prim-color-light;
+    transition: all .25s;
+    &:active {
+        background-color: $prim-color-light;
+
+    }
     &:last-child {
         border: none;
     }

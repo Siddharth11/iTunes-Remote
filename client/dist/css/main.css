@@ -194,7 +194,11 @@ input[type='range'] {
   clear: both;
   padding: 0 10px;
   height: 40px;
-  border-bottom: 1px solid #63636B; }
+  border-bottom: 1px solid #63636B;
+  -webkit-transition: all .25s;
+          transition: all .25s; }
+  .tracklist__item:active {
+    background-color: #63636B; }
   .tracklist__item:last-child {
     border: none; }
   .tracklist__item span {
@@ -241,7 +245,11 @@ input[type='range'] {
 
 .playlist__item {
   padding: 10px 0 10px 15px;
-  border-bottom: 1px solid #63636B; }
+  border-bottom: 1px solid #63636B;
+  -webkit-transition: all .25s;
+          transition: all .25s; }
+  .playlist__item:active {
+    background-color: #63636B; }
   .playlist__item:last-child {
     border: none; }
 
