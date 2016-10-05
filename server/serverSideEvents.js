@@ -12,7 +12,8 @@ module.exports = function (io) {
             playlists: '',
             currentTrack: '',
             currentPlaylist: '',
-            playerPosition: ''
+            playerPosition: '',
+            appRunning: false
         }
 
         console.log('')
@@ -30,8 +31,20 @@ module.exports = function (io) {
             })
         })
 
-        socket.on('updateVolume', (value) => {
+        socket.on('updateVolume', value => {
             osa.execute(c.setVolume(value), (err, result) => {
+                if (err) console.log(err)
+            })
+        })
+
+        socket.on('playPlaylist', value => {
+            osa.execute(c.playPlaylist(value), (err, result) => {
+                if (err) console.log(err)
+            })
+        })
+
+        socket.on('playTrack', arr => {
+            osa.execute(c.playTrack(arr), (err, result) => {
                 if (err) console.log(err)
             })
         })
@@ -52,29 +65,40 @@ module.exports = function (io) {
         // continous polling
         setInterval(() => {
 
-            // poll player state
-            emitFunc('getPlayerState', 'playerState')
+            osa.execute(c.checkAppRunning, (err, result) => {
+                obj.appRunning = result
+            })
 
-            // poll current track name
-            emitFunc('getCurrentTrack', 'currentTrack')
+            if (obj.appRunning) {
 
-            // poll current playlist name
-            emitFunc('getCurrentPlaylist', 'currentPlaylist')
+                // poll player state
+                emitFunc('getPlayerState', 'playerState')
 
-            // poll volume
-            emitFunc('getVolume', 'volume')
+                // poll volume
+                emitFunc('getVolume', 'volume')
 
-            // poll all tracks info array
-            emitFunc('getTracksData', 'tracksData')
+                // poll playlists array
+                emitFunc('getPlaylists', 'playlists')
 
-            // poll playlists array
-            emitFunc('getPlaylists', 'playlists')
+                // don't emit these events if playerstate is paused
+                if (obj.playerState !== 'stopped') {
 
-            // poll player position
-            emitFunc('updatePlayerPosition', 'playerPosition')
+                    // poll current track name
+                    emitFunc('getCurrentTrack', 'currentTrack')
+
+                    // poll current playlist name
+                    emitFunc('getCurrentPlaylist', 'currentPlaylist')
+
+                    // poll all tracks info array
+                    emitFunc('getTracksData', 'tracksData')
+
+                    // poll player position
+                    emitFunc('updatePlayerPosition', 'playerPosition')
+                }
+
+            }
 
         }, 1000)
-
 
 
         socket.on('disconnect', function () {
