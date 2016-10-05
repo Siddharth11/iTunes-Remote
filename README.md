@@ -1,5 +1,7 @@
 # iTunes Remote
-Control iTunes by other devices on same network (even a hotspot without internet would do)
+Control iTunes by other devices on same network (even a hotspot without internet would do)  
+Built using AppleScript, Socket.io, React, and Redux
+
 
 **(work in progress)**
 
@@ -24,5 +26,5 @@ Open the displayed link in a browser to access the remote
 
 ## Prerequisites
 - macOS or OSX
-- Nodejs >= 6.0
+- Node >= 6.0
 
