@@ -37,6 +37,14 @@ const reducer = (state = initialState, action) => {
             return Object.assign({}, state, {
                 playlists: action.playlists
             })
+        case types.TOGGLE_PLAYLIST_WINDOW:
+            return Object.assign({}, state, {
+                playlistWindowVisible: action.playlistWindowVisible
+            })
+        case types.TOGGLE_TRACKLIST_WINDOW:
+            return Object.assign({}, state, {
+                tracklistWindowVisible: action.tracklistWindowVisible
+            })
         default:
             return state
     }
