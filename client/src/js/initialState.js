@@ -2,11 +2,13 @@ const initialState = {
 	socket: {},
     currentTrack: '',
     currentPlaylist: '',
-    tracksData: [],
+    tracksData: [[], []],
     playlists: [],
     volume: 0,
     playerState: '',
-    playerPosition: 0    
+    playerPosition: 0,
+    playlistWindowVisible: false,
+    tracklistWindowVisible: false,
 }
 
 export default initialState

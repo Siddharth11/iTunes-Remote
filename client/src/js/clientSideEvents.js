@@ -42,9 +42,7 @@ const clientSideEvents = () => {
 
         // get tracks array
         socket.on('getTracksData', data => {
-
-            console.log(data)
-
+            
             // update data in store
             store.dispatch(updateTracksData(data))
         })
@@ -55,7 +53,7 @@ const clientSideEvents = () => {
             console.log(data)
 
             // update data in store
-            store.dispatch(updatePlaylists(data))
+            store.dispatch(updatePlaylists(data.slice(15)))
         })
 
         // get current track name

@@ -1,0 +1,53 @@
+@import '../variables.scss';
+
+.tracklist {
+    position: absolute;
+    width: 275px;
+    height: 100%;
+    background: $prim-color;
+    opacity: 0;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    box-shadow: -5px 0 50px -5px $prim-color;
+    transform: translateX(100%);
+    transition: all .2s;
+    transition-delay: .1s;
+}
+
+.tracklist.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tracklist__item {
+    clear: both;
+    padding: 0 10px;
+    height: 40px;
+    border-bottom: 1px solid $prim-color-light;
+    &:last-child {
+        border: none;
+    }
+    span {
+        font-size: .8rem;
+        font-weight: 100;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    span:first-child {
+        float: left;
+        max-width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    span:last-child {
+        float: right;
+    }
+}
+
+.tracklist__item.current {
+    background-color: $sec-color;
+}

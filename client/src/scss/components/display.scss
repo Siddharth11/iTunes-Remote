@@ -2,6 +2,7 @@
 
 .display {
     position: relative;
+    height: calc(100% - 150px);
 }
 
 .display__track {
@@ -19,4 +20,20 @@
         stroke: $sec-color;
         stroke-width: 3px;
     }
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.btn--tracklist {
+    right: 10px;
+}
+
+.btn--playlist {
+    left: 10px;
 }
