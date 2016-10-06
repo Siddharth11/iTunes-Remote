@@ -36,7 +36,7 @@ module.exports = function (grunt) {
                     sourceMap: true
                 },
                 files: {
-                    'client/dist/js/bundle.min.js': ['client/dist/js/bundle.js']
+                    'client/dist/js/bundle.js': ['client/dist/js/bundle.js']
                 }
             }
         },
@@ -57,10 +57,17 @@ module.exports = function (grunt) {
                 }
             }
         },
+        cssmin: {
+            target: {
+                files: {
+                    'client/dist/css/main.min.css': ['client/dist/css/main.css']
+                }
+            }
+        },
         watch: {
             styles: {
                 files: ['client/src/scss/*.scss', 'client/src/scss/**/*.scss'],
-                tasks: ['sass', 'autoprefixer']
+                tasks: ['sass', 'autoprefixer', 'cssmin']
             },
             scripts: {
                 files: ['client/src/js/*.js', 'client/src/js/**/*.js', 'client/src/js/**/**/*.js'],
@@ -79,7 +86,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-exorcise');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['env', 'sass', 'autoprefixer', 'browserify', 'uglify']);
+    grunt.registerTask('build', ['env', 'sass', 'autoprefixer', 'cssmin', 'browserify', 'uglify']);
 }
