@@ -12,8 +12,7 @@
     overflow-y: auto;
     box-shadow: 5px 0 50px -5px $prim-color;
     transform: translateX(-100%);
-    transition: all .2s;
-    transition-delay: .1s;
+    transition: all .15s;
 }
 
 .playlist.visible {
@@ -25,6 +24,7 @@
     padding: 10px 0 10px 15px;
     border-bottom: 1px solid $prim-color-light;
     transition: all .25s;
+    font-size: .8rem;
     &:active {
         background-color: $prim-color-light;
 

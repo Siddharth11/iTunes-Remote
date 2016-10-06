@@ -5,12 +5,14 @@ import DisplayTrack from './DisplayTrack'
 import DisplayProgress from './DisplayProgress'
 import TogglePlaylist from './TogglePlaylist'
 import ToggleTracklist from './ToggleTracklist'
+import Visual from './Visual'
 
 const Display = React.createClass({
 
     render() {
         return (
             <div className="display" >
+                <Visual />
                 <TogglePlaylist />
                 <ToggleTracklist />
                 <DisplayTrack />

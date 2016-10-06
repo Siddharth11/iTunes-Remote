@@ -11,7 +11,6 @@ import togglePlaylistWindow from '../../actions/togglePlaylistWindow'
 const TogglePlaylist = React.createClass({
 
     toggle() {
-        console.log('clicked')
         store.dispatch(togglePlaylistWindow(true))
     },
 

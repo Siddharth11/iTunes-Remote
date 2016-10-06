@@ -12,8 +12,7 @@
     overflow-y: auto;
     box-shadow: -5px 0 50px -5px $prim-color;
     transform: translateX(100%);
-    transition: all .2s;
-    transition-delay: .1s;
+    transition: all .15s;
 }
 
 .tracklist.visible {
@@ -36,7 +35,6 @@
     }
     span {
         font-size: .8rem;
-        font-weight: 100;
         position: relative;
         top: 50%;
         transform: translateY(-50%);

@@ -12,7 +12,6 @@ import toggleTracklistWindow from '../../actions/toggleTracklistWindow'
 const ToggleTracklist = React.createClass({
     
     toggle() {
-        console.log('clicked')
         store.dispatch(toggleTracklistWindow(true))
     },
 
