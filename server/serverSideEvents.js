@@ -55,10 +55,14 @@ module.exports = function (io) {
                     console.log(obj)
                 }
 
-                // emit only if the saved value is not equal to fetched value
-                if (obj[key] !== result.toString().trim()) {
-                    socket.emit(doThis, result)
-                    obj[key] = result.toString().trim()
+                try {
+                    // emit only if the saved value is not equal to fetched value
+                    if (obj[key] !== result.toString().trim()) {
+                        socket.emit(doThis, result)
+                        obj[key] = result.toString().trim()
+                    }
+                } catch (e) {
+                    console.log(`Error occured excuting: ${doThis}`)
                 }
             })
         }
