@@ -23,7 +23,6 @@ module.exports = function (io) {
 
         executeOnly.forEach(doThis => {
             socket.on(doThis, () => {
-                console.log(`Execute: ${doThis}`)
                 osa.execute(c[doThis], (err, result) => {
                     if (err) console.log(err)
                 })
