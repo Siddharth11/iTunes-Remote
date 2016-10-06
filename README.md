@@ -4,7 +4,9 @@
 
 # iTunes Remote
 Control iTunes by other devices on same network (even a hotspot without internet would work)  
-Built using AppleScript, Socket.io, React, and Redux
+Multiple clients can work independently, and the UI will always be in sync  
+<br />
+✨ Built using AppleScript, Socket.io, React, and Redux ✨
 
 
 ## Usage:
