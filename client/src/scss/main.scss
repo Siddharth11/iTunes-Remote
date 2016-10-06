@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: $prim-color;
 }
 
 * {
@@ -23,9 +24,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: $prim-color;
     overflow: hidden;
-    box-shadow: 0 9px 21px -5px $prim-color;
     transform: translate(-50%, -50%);
 }
 

@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #212121; }
 
 * {
   box-sizing: border-box; }
@@ -18,9 +19,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: #212121;
   overflow: hidden;
-  box-shadow: 0 9px 21px -5px #212121;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
 
