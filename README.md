@@ -29,6 +29,10 @@ npm start
 - Node >= 6.0
 
 ## Development
+- Install all dependencies
+```
+npm install
+```
 - Start server  
 ```
 npm install
