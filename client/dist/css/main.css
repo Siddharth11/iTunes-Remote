@@ -190,7 +190,12 @@ input[type='range'] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+  .player #outer-circle {
+    stroke-width: 4px; }
+  .player #inner-circle {
+    stroke-width: 44px; }
   .player #arcs {
+    stroke-width: 44px;
     -webkit-animation: rotate 2s linear infinite;
             animation: rotate 2s linear infinite;
     -webkit-animation-play-state: paused;

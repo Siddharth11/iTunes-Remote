@@ -56,7 +56,14 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    #outer-circle {
+        stroke-width: 4px;
+    }
+    #inner-circle {
+        stroke-width: 44px;
+    }
     #arcs {
+        stroke-width: 44px;
         animation: rotate 2s linear infinite;
         animation-play-state: paused;
         transform-origin: 50% 50%;

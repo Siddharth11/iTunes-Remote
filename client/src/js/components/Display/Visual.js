@@ -25,9 +25,9 @@ const Visual = React.createClass({
                 </defs>
                 <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                     <g id="Artboard">
-                        <circle id="outer-circle" stroke="#FFFFFF" strokeWidth="2" cx="200.5" cy="200.5" r="112.5"></circle>
-                        <circle id="inner-circle" stroke="#CB121F" strokeWidth="2" cx="200.5" cy="200.5" r="28.125"></circle>
-                        <path id="arcs" d="M120,200.5 C120,244.958922 156.041078,281 200.5,281 L200.5,281 M281,200.5 C281,156.041078 244.958922,120 200.5,120" id="arcs" stroke="#FFFFFF" strokeWidth="2"></path>
+                        <circle id="outer-circle" stroke="#FFFFFF" cx="200.5" cy="200.5" r="112.5"></circle>
+                        <circle id="inner-circle" stroke="#CB121F" cx="200.5" cy="200.5" r="28.125"></circle>
+                        <path id="arcs" d="M120,200.5 C120,244.958922 156.041078,281 200.5,281 L200.5,281 M281,200.5 C281,156.041078 244.958922,120 200.5,120" id="arcs" stroke="#FFFFFF" ></path>
                         <g transform="translate(243.000000, 63.000000)" stroke="#FFFFFF">
                             <g id="stick">
                                 <path d="M29.5,179.5 L102.5,30.5" id="Line" strokeWidth="2" strokeLinecap="square"></path>
