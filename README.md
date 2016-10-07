@@ -3,10 +3,10 @@
 </p>
 
 # iTunes Remote
-Control iTunes by other devices on same network (even a hotspot without internet would work)  
-Multiple clients can work independently, and the UI will always be in sync  
+Control iTunes on Mac with other devices on same network (works without internet too!)  
+Multiple clients can access the remote independently, and the UI will always be in sync
 <br />
-✨ Built using AppleScript, Socket.io, React, and Redux ✨
+✨ Built using WebSockets, AppleScript, React, and Redux ✨
 
 
 ## Usage:
@@ -48,4 +48,3 @@ grunt
 ```
 grunt build
 ```
-
