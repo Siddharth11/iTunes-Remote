@@ -5,24 +5,12 @@ import store from '../../store'
 
 import List from './List'
 
-const Tracklist = React.createClass({
+const Tracklist = ({show}) => (
+    <div className={(show) ? `tracklist visible` : `tracklist`} >
+        <List />
+    </div>
+)
 
-    render() {
-
-        const cn = (this.props.show) ? `tracklist visible` : `tracklist`
-
-        return (
-            <div className={cn} >
-                <List />
-            </div>
-        )
-    }
-})
-
-const mapStateToProps = store => {
-    return {
-        show: store.tracklistWindowVisible
-    }
-}
+const mapStateToProps = store => ({ show: store.tracklistWindowVisible })
 
 export default connect(mapStateToProps)(Tracklist)

@@ -8,27 +8,15 @@ import MdQueueMusic from 'react-icons/lib/md/queue-music'
 // actions
 import toggleTracklistWindow from '../../actions/toggleTracklistWindow'
 
-
-const ToggleTracklist = React.createClass({
-    
-    toggle() {
-        store.dispatch(toggleTracklistWindow(true))
-    },
-
-    render() {
-        return (
-            <MdQueueMusic 
-                className='toggle-btn btn--tracklist'
-                onClick={this.toggle}
-            />
-        )
-    }
-})
-
-const mapStateToProps = store => {
-    return {
-        show: store.tracklistWindowVisible
-    }
+const toggle = () => {
+    store.dispatch(toggleTracklistWindow(true))
 }
 
-export default connect(mapStateToProps)(ToggleTracklist)
+const ToggleTracklist = () => (
+    <MdQueueMusic
+        className= 'toggle-btn btn--tracklist'
+        onClick= {toggle}
+        />
+)
+
+export default connect()(ToggleTracklist)

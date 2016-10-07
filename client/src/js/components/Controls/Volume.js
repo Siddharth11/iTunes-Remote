@@ -18,7 +18,7 @@ const Volume = React.createClass({
             val: nextProps.volume
         })
     },
-    
+
     emitVolume() {
         this.props.socket.emit('updateVolume', this.state.val)
     },
@@ -43,11 +43,9 @@ const Volume = React.createClass({
     }
 })
 
-const mapStateToProps = store => {
-    return {
-        socket: store.socket,
-        volume: store.volume
-    }
-}
+const mapStateToProps = store => ({
+    socket: store.socket,
+    volume: store.volume
+})
 
 export default connect(mapStateToProps)(Volume)

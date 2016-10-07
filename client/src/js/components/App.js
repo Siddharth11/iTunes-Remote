@@ -8,18 +8,14 @@ import Tracklist from './Tracklist/Tracklist'
 import Playlist from './Playlist/Playlist'
 import Overlay from './Overlay'
 
-const App = React.createClass({
-    render() {
-        return (
-            <div className="app" >
-                <Overlay />
-                <Display />
-                <Controls />
-                <Tracklist />
-                <Playlist />
-            </div>
-        )
-    }
-})
+const App = () => (
+    <div className="app" >
+        <Overlay />
+        <Display />
+        <Controls />
+        <Tracklist />
+        <Playlist />
+    </div>
+)
 
 export default App

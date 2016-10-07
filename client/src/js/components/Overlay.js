@@ -52,11 +52,9 @@ const Overlay = React.createClass({
     }
 })
 
-const mapStateToProps = store => {
-    return {
-        pVisible: store.playlistWindowVisible,
-        tVisible: store.tracklistWindowVisible
-    }
-}
+const mapStateToProps = store => ({
+    pVisible: store.playlistWindowVisible,
+    tVisible: store.tracklistWindowVisible
+})
 
 export default connect(mapStateToProps)(Overlay)

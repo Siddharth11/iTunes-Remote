@@ -5,31 +5,16 @@ import store from '../../store'
 
 import Item from './Item'
 
-const List = React.createClass({
+const items = arr => (
+    arr.map(i => <Item key={i} name={i} />)
+)
 
-    render() {
+const List = ({ arr }) => (
+    <div className='list'>
+        { items(arr) }
+    </div>
+)
 
-        const items = this.props.arr.map(i => {
-            return (
-                <Item 
-                    key={i}
-                    name={i}
-                />
-            )
-        })
-
-        return (
-            <div className='list'>
-                {items}
-            </div>
-        )
-    }
-})
-
-const mapStateToProps = store => {
-    return {
-        arr: store.playlists
-    }
-}
+const mapStateToProps = store => ({ arr: store.playlists })
 
 export default connect(mapStateToProps)(List)

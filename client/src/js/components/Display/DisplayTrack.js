@@ -3,21 +3,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import store from '../../store'
 
-const DisplayTrack = React.createClass({
+const DisplayTrack = ({ currentTrack }) => (
+    <div className="display__track" >
+        { currentTrack }
+    </div>
+)
 
-    render() {
-        return (
-            <div className="display__track" >
-                {this.props.currentTrack}
-            </div>
-        )
-    }
-})
-
-const mapStateToProps = store => {
-    return {
-        currentTrack: store.currentTrack
-    }
-}
+const mapStateToProps = store => ({ currentTrack: store.currentTrack })
 
 export default connect(mapStateToProps)(DisplayTrack)

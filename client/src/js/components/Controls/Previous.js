@@ -6,29 +6,17 @@ import store from '../../store'
 // icon component
 import MdSkipPrevious from 'react-icons/lib/md/skip-previous'
 
-const Previous = React.createClass({
-
-    playPrevious() {
-
-        this.props.socket.emit('playPreviousTrack')
-
-        console.log('Playing previous track')
-
-    },
-
-    render() {
-        return (
-            <div className="icon-wrapper" onClick={this.playPrevious}>
-                <MdSkipPrevious />
-            </div>
-        )
-    }
-})
-
-const mapStateToProps = store => {
-    return {
-        socket: store.socket
-    }
+const playPrevious = socket => () => {
+    socket.emit('playPreviousTrack')
+    console.log('Playing previous track')
 }
+
+const Previous = ({ socket }) => (
+    <div className="icon-wrapper" onClick={playPrevious(socket) }>
+        <MdSkipPrevious />
+    </div>
+)
+
+const mapStateToProps = store => ({ socket: store.socket })
 
 export default connect(mapStateToProps)(Previous)

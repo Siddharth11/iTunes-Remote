@@ -1,10 +1,8 @@
 import React from 'react'
 import MdPause from 'react-icons/lib/md/pause'
 
-const Pause = React.createClass({
-    render() {
-        return <MdPause />
-    }
-})
+const Pause = () => (
+    <MdPause />
+)
 
 export default Pause

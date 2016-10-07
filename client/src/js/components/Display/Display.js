@@ -7,19 +7,14 @@ import TogglePlaylist from './TogglePlaylist'
 import ToggleTracklist from './ToggleTracklist'
 import Visual from './Visual'
 
-const Display = React.createClass({
-
-    render() {
-        return (
-            <div className="display" >
-                <Visual />
-                <TogglePlaylist />
-                <ToggleTracklist />
-                <DisplayTrack />
-                <DisplayProgress />
-            </div>
-        )
-    }
-})
+const Display = () => (
+    <div className="display" >
+        <Visual />
+        <TogglePlaylist />
+        <ToggleTracklist />
+        <DisplayTrack />
+        <DisplayProgress />
+    </div>
+)
 
 export default Display
