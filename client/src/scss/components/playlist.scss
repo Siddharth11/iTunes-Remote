@@ -1,5 +1,4 @@
 @import '../variables.scss';
-
 .playlist {
     position: absolute;
     width: 250px;
@@ -21,13 +20,15 @@
 }
 
 .playlist__item {
-    padding: 10px 0 10px 15px;
+    padding: 15px 0 15px 15px;
     border-bottom: 1px solid $prim-color-light;
     transition: all .25s;
     font-size: .8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     &:active {
         background-color: $prim-color-light;
-
     }
     &:last-child {
         border: none;
