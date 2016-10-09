@@ -9,14 +9,14 @@ const playItem = (socket, name) => () => {
 
 const Item = ({socket, current, name}) => {
     let cn
-    if (name === current) {
+    if (name.trim() === current.trim()) {
         cn = `playlist__item current`
     } else {
         cn = `playlist__item`
     }
     return (
         <div className={cn} onClick={ playItem(socket, name) } >
-            {name}
+            <span>{name}</span>
         </div>
     )
 }

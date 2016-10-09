@@ -10,7 +10,7 @@ const playItem = (socket, name, playlist) => () => {
 const Item = ({socket, ct, cp, name, time}) => {
     let cn
 
-    if (name === ct) {
+    if (name.trim() === ct.trim()) {
         cn = `tracklist__item current`
     } else {
         cn = `tracklist__item`
