@@ -6,7 +6,7 @@ import store from '../../store'
 import List from './List'
 
 const Tracklist = ({show}) => (
-    <div className={(show) ? `tracklist visible` : `tracklist`} >
+    <div className={(show) ? `sidebar tracklist visible` : `sidebar tracklist`} >
         <List />
     </div>
 )

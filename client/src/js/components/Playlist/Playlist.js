@@ -6,7 +6,7 @@ import store from '../../store'
 import List from './List'
 
 const Playlist = ({ show }) => (
-    <div className={(show) ? `playlist visible` : `playlist`} >
+    <div className={(show) ? `sidebar playlist visible` : `sidebar playlist`} >
         <List />
     </div>
 )
