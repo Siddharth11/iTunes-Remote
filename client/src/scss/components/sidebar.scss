@@ -1,0 +1,84 @@
+@import '../variables.scss';
+.sidebar {
+    position: absolute;
+    height: 100%;
+    background: $prim-color;
+    opacity: 0;
+    z-index: 99;
+    top: 0;
+    overflow-y: auto;
+    transition: all .15s;
+    .list {
+        padding: 0 10px;
+    }
+}
+
+.sidebar div div {
+    padding: 0 10px;
+    height: 46px;
+    position: relative;
+    border-bottom: 1px solid $prim-color-light;
+    transition: all .25s;
+    &:active {
+        background-color: $prim-color-light;
+    }
+    &:last-child {
+        border: none;
+    }
+}
+
+.sidebar .current {
+    &:before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 2px);
+        background-color: #CB121F;
+        box-shadow: 0 0 30px -5px #CB121F;
+    }
+}
+
+.sidebar span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: .8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &:first-child {
+        left: 10px;
+    }
+}
+
+.sidebar.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.playlist {
+    left: 0;
+    width: 250px;
+    transform: translateX(-100%);
+}
+
+.tracklist {
+    right: 0;
+    width: 275px;
+    transform: translateX(100%);
+}
+
+.tracklist__item {
+    clear: both;
+}
+
+.tracklist__item span {
+    &:first-child {
+        max-width: 175px;
+    }
+    &:last-child {
+        right: 10px;
+    }
+}
