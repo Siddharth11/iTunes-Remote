@@ -53,7 +53,7 @@ const clientSideEvents = () => {
             console.log(data)
 
             // update data in store
-            store.dispatch(updatePlaylists(data.slice(15)))
+            store.dispatch(updatePlaylists(data.slice(12)))
         })
 
         // get current track name
