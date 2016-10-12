@@ -15,6 +15,6 @@ app.get('/', function (req, res) {
 
 const serverSideEvents = require('./serverSideEvents')(io)
 
-http.listen((process.env.PORT || 5000), function () {
+http.listen(5000, function () {
     console.log('listening on: http://' + ip.v4() + ':5000')
 })
