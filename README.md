@@ -11,12 +11,12 @@ Multiple clients can access the remote independently, and the UI will always be 
 
 ## Usage:
 - Run following commands in terminal
-```
-git clone https://github.com/Siddharth11/iTunes-Remote.git
-cd iTunes-Remote
-npm install --only=production
-npm start
-```
+
+`git clone https://github.com/Siddharth11/iTunes-Remote.git`  
+`cd iTunes-Remote`  
+`npm install --only=production` or `yarn install --prod`  
+`npm start`  
+
 - Open the displayed link in a browser to access the remote
 
 ## Features
@@ -31,20 +31,11 @@ npm start
 - Node >= 6.0
 
 ## Development
-- Install all dependencies
-```
-npm install
-```
-- Start server  
-```
-npm install
-npm start
-```
-- Start JS (ES6) and Sass compilation
-```
-grunt
-```
-- Final build
-```
-grunt build
-```
+- Install all dependencies  
+`npm install` or `yarn`  
+- Start server   
+`npm start`  
+- Start JS (ES6) and Sass compilation  
+`grunt`  
+- Final build  
+`grunt build`
