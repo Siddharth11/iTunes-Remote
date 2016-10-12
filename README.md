@@ -11,12 +11,10 @@ Multiple clients can access the remote independently, and the UI will always be 
 
 ## Usage:
 - Run following commands in terminal
-
-`git clone https://github.com/Siddharth11/iTunes-Remote.git`  
-`cd iTunes-Remote`  
-`npm install --only=production` or `yarn install --prod`  
-`npm start`  
-
+ - `git clone https://github.com/Siddharth11/iTunes-Remote.git`  
+ - `cd iTunes-Remote`  
+ - `npm install --only=production` or `yarn install --prod`  
+ - `npm start`  
 - Open the displayed link in a browser to access the remote
 
 ## Features
