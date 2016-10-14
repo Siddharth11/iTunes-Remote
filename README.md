@@ -3,7 +3,7 @@
 </p>
 
 # iTunes Remote
-Control iTunes on Mac with other devices on same network (works without internet too!)  
+Remotely control iTunes on Mac without Internet!  
 Multiple clients can access the remote independently, and the UI will always be in sync    
 <br />
 ✨ Built using WebSockets, AppleScript, React, and Redux ✨
