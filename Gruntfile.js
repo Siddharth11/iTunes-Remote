@@ -12,9 +12,7 @@ module.exports = function (grunt) {
                 dest: 'client/dist/js/bundle.js',
                 options: {
                     transform: [
-                        ['babelify', {
-                            presets: ['es2015', 'react']
-                        }]
+                        ['babelify']
                     ],
                     browserifyOptions: {
                         debug: true
