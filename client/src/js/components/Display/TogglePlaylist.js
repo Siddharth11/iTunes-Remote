@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import store from '../../store'
 
 // icon
 import MdLibraryMusic from 'react-icons/lib/md/library-music'
@@ -8,14 +7,14 @@ import MdLibraryMusic from 'react-icons/lib/md/library-music'
 // actions
 import togglePlaylistWindow from '../../actions/togglePlaylistWindow'
 
-const toggle = () => {
-    store.dispatch(togglePlaylistWindow(true))
+const toggle = (dispatch) => () => {
+    dispatch(togglePlaylistWindow(true))
 }
 
-const TogglePlaylist = () => (
+const TogglePlaylist = ({ dispatch }) => (
     <MdLibraryMusic
         className='toggle-btn btn--playlist'
-        onClick={toggle}
+        onClick={toggle(dispatch)}
         />
 )
 
