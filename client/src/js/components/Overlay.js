@@ -36,7 +36,9 @@ const Overlay = React.createClass({
 
         if (this.props.pVisible || this.props.tVisible) {
             cn = `overlay visible`
-            this.state.el.style.display = 'block'
+            if (this.state.el) {
+              this.state.el.style.display = 'block'
+            }
         } else {
             cn = `overlay`
         }
