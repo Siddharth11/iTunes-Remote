@@ -1,7 +1,6 @@
 // essentials
 import React from 'react'
 import { connect } from 'react-redux'
-import store from '../../store'
 
 const playItem = (socket, name) => () => {
     socket.emit('playPlaylist', name)

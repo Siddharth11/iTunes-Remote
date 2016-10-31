@@ -1,7 +1,6 @@
 // essentials
 import React from 'react'
 import { connect } from 'react-redux'
-import store from '../store'
 
 // actions
 import toggleTracklistWindow from '../actions/toggleTracklistWindow'
@@ -23,8 +22,8 @@ const Overlay = React.createClass({
 
 
     toggle() {
-        store.dispatch(togglePlaylistWindow(false))
-        store.dispatch(toggleTracklistWindow(false))
+        this.props.dispatch(togglePlaylistWindow(false))
+        this.props.dispatch(toggleTracklistWindow(false))
 
         setTimeout(() => {
             this.state.el.style.display = 'none'
@@ -37,7 +36,9 @@ const Overlay = React.createClass({
 
         if (this.props.pVisible || this.props.tVisible) {
             cn = `overlay visible`
-            this.state.el.style.display = 'block'
+            if (this.state.el) {
+              this.state.el.style.display = 'block'
+            }
         } else {
             cn = `overlay`
         }
