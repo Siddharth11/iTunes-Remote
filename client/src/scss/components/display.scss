@@ -55,7 +55,7 @@
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.8);
     #outer-circle {
         stroke-width: 4px;
     }
@@ -75,6 +75,17 @@
     }
 }
 
+@media (max-height: 350px) {
+    .player {
+        display: none;
+    }
+    .display__track {
+        bottom: initial;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 .active {
     #arcs {
         animation-play-state: running;
@@ -85,7 +96,10 @@
 }
 
 @keyframes rotate {
-    0% {transform: rotate(0deg)}
-    100% {transform: rotate(360deg)}
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
 }
-

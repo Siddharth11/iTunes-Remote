@@ -187,8 +187,8 @@ input[type='range'] {
   position: absolute;
   top: 45%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8); }
   .player #outer-circle {
     stroke-width: 4px; }
   .player #inner-circle {
@@ -208,6 +208,15 @@ input[type='range'] {
             transform: rotate(-20deg);
     -webkit-transform-origin: 100% 0;
             transform-origin: 100% 0; }
+
+@media (max-height: 350px) {
+  .player {
+    display: none; }
+  .display__track {
+    bottom: initial;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); } }
 
 .active #arcs {
   -webkit-animation-play-state: running;
