@@ -15,7 +15,7 @@ Multiple clients can access the remote independently, and the UI will always be 
  - `cd iTunes-Remote`  
  - `npm install --only=production` or `yarn install --prod`  
  - `npm start`  
-- Open the displayed link in a browser (the other device should be on same network) to access the remote
+- Open the displayed link in a browser to access the remote. The other device should be on same network, a Wi-Fi hotspot without internet would also work.
 
 ## Features
 - Play & Pause current track
