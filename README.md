@@ -34,6 +34,6 @@ Multiple clients can access the remote independently, and the UI will always be 
 - Start server   
 `npm start`  
 - Start JS (ES6) and Sass compilation  
-`grunt`  
+`npm run dev`  
 - Final build  
-`grunt build`
+`npm run build`
