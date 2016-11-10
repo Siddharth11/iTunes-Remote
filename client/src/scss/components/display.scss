@@ -1,4 +1,6 @@
 @import '../variables.scss';
+@import '../animations.scss';
+
 .display {
     position: relative;
     height: calc(100% - 150px);
@@ -92,14 +94,5 @@
     }
     #stick {
         transform: rotate(0deg);
-    }
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg)
-    }
-    100% {
-        transform: rotate(360deg)
     }
 }
