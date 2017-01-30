@@ -11,6 +11,8 @@ import updatePlaylistName from './actions/updatePlaylistName'
 import updatePlaylists from './actions/updatePlaylists'
 import updatePlaylerPosition from './actions/updatePlayerPosition'
 
+const junkPlaylists = ["Music","Videos","Films","Home Videos","TV Programmes","Podcasts","iTunes U","Audiobooks","Books","PDFs","Audiobooks","Recently Added"]
+
 const clientSideEvents = () => {
 
     const socket = io()
@@ -19,7 +21,7 @@ const clientSideEvents = () => {
 
         console.log(`Yuhooo! We're now connected to server`)
 
-        // update socket var in store to make it 
+        // update socket var in store to make it
         // available for all components
         store.dispatch(updateSocketVar(socket))
 
@@ -42,7 +44,7 @@ const clientSideEvents = () => {
 
         // get tracks array
         socket.on('getTracksData', data => {
-            
+
             // update data in store
             store.dispatch(updateTracksData(data))
         })
@@ -53,7 +55,7 @@ const clientSideEvents = () => {
             console.log(data)
 
             // update data in store
-            store.dispatch(updatePlaylists(data.slice(12)))
+            store.dispatch(updatePlaylists(data.filter(p => junkPlaylists.indexOf(p) === -1)))
         })
 
         // get current track name
