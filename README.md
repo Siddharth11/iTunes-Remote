@@ -9,8 +9,7 @@ Multiple clients can access the remote independently, and the UI will always be 
 ✨ Built using WebSockets, AppleScript, React, and Redux ✨
 
 
-## Usage:
-- Run following commands in terminal
+## Usage:  
  - `git clone https://github.com/Siddharth11/iTunes-Remote.git`  
  - `cd iTunes-Remote`  
  - `npm install --only=production` or `yarn install --prod`  
