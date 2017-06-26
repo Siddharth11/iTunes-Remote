@@ -36,3 +36,7 @@ Multiple clients can access the remote independently, and the UI will always be 
 `npm run dev`  
 - Final build  
 `npm run build`
+
+## How is it different from the already existing Remote app by Apple?
+Functionality wise both are similar. Although, the Apple app only works on Apple devices. Whereas, this is a web app, you can open it on any device with an internet browser. And it works without Internet too.  
+Make a hotspot ➡ open the displayed link in a browser ➡ annnd you're good to go! 🚀
