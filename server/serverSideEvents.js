@@ -85,14 +85,14 @@ module.exports = function (io) {
                     // poll playlists array
                     emitFunc('getPlaylists', 'playlists')
 
-                    // don't emit these events if playerState is stopped
+                    // don't emit these events if playerState is stopped or undefined
                     osa.execute(c.getPlayerState, (err, state) => {
                         if (err) {
                             console.log(err)
                             console.log(obj)
                         }
 
-                        if (state.trim() !== 'stopped') {
+                        if (state && (state.trim() !== 'stopped')) {
 
                             emitFunc('getPlayerState', 'playerState')
 
